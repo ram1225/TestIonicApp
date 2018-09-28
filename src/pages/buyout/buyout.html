@@ -1,0 +1,52 @@
+<!--
+  Generated template for the BuyoutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{data}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click)="goToHomeAgain()">Go to home again</button>
+  <div >
+    <ion-segment [(ngModel)]="link">
+      <ion-segment-button value="form">Form</ion-segment-button>
+      <ion-segment-button value="hola">Hola</ion-segment-button>
+    </ion-segment>
+  </div>
+  <div [ngSwitch]="link">
+    <ion-list *ngSwitchCase="'form'">
+      <ion-label>Form!!!</ion-label>
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <ion-list *ngSwitchCase="'hola'">
+       <ion-label>Hola!!!</ion-label>
+      <ion-item>
+        <ion-label>Other</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>other</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    
+    </ion-list>
+  </div>
+</ion-content>

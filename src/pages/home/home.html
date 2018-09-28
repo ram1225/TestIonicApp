@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
+  <ion-list>
+    <button ion-item (click)="goToBuyOutPage('shop')">shop</button>
+    <button ion-item (click)="goToBuyOutPage('bread')">Bread</button>
+    <button ion-item (click)="goToBuyOutPage('milk')">Milk</button>   
+  </ion-list>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
